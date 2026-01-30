@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(ellipse at top, #141a27 0%, #0c111a 50%, #05070b 100%);
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 460px;
+}
+
+.login-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    backdrop-filter: blur(10px);
+    padding: 40px 32px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 60px rgba(0,0,0,0.5);
+}
+
+/* BRAND */
+.brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 25px;
+}
+
+.brand-logo {
+    width: 32px;
+    height: 32px;
+}
+
+.brand-title {
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: .1em;
+}
+
+.brand-title span {
+    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: .25em;
+    display: block;
+    color: #7d88ff;
+    text-transform: uppercase;
+}
+
+/* TEXT */
+.login-title {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 6px;
+}
+
+.login-subtitle {
+    font-size: 14px;
+    opacity: .55;
+    margin-bottom: 34px;
+}
+
+/* STEAM INFO BOX */
+.steam-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 14px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 14px;
+    margin-bottom: 28px;
+}
+
+.steam-icon {
+    width: 32px;
+    height: 32px;
+    opacity: .9;
+}
+
+.steam-text {
+    font-size: 14px;
+    opacity: .8;
+}
+
+/* STEAM BUTTON */
+.login-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    width: 100%;
+    padding: 14px 0;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(90deg, #1b2838, #0d131c);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: .25s;
+}
+
+.login-btn-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.login-btn:hover {
+    background: linear-gradient(90deg, #243447, #0d131c);
+    box-shadow: 0 0 16px rgba(0, 255, 163, 0.2);
+}
+
+/* PRIVACY */
+.privacy-text {
+    margin-top: 22px;
+    font-size: 12px;
+    opacity: .6;
+}
+
+.privacy-text a {
+    color: #7d88ff;
+    text-decoration: none;
+    font-weight: 600;
+}
