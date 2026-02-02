@@ -6,10 +6,6 @@ import {
 } from '../party/party.api.js';
 import { startPartyPolling } from '../party/party.polling.js';
 
-/* =====================
-   RENDER
-===================== */
-
 export function renderInviteModal() {
     const container = document.querySelector('.invite-list');
     if (!container) return;
@@ -31,19 +27,19 @@ export function renderInviteModal() {
 
         const btn = document.createElement('button');
 
-        // 🔒 УЖЕ В ПАТИ
+
         if (member?.status === 'accepted') {
             btn.textContent = 'IN PARTY';
             btn.disabled = true;
         }
 
-        // ⏳ УЖЕ ПРИГЛАШЁН
+
         else if (member?.status === 'invited') {
             btn.textContent = 'INVITED';
             btn.disabled = true;
         }
 
-        // ➕ МОЖНО ПРИГЛАСИТЬ
+
         else {
             btn.textContent = 'INVITE';
 
@@ -68,13 +64,9 @@ export function renderInviteModal() {
     });
 }
 
-/* =====================
-   ACTIONS
-===================== */
-
 async function onInviteClick(friendId) {
 
-    // 1️⃣ если party ещё нет — создаём
+
     if (!state.party?.id) {
         const partyId = await partyCreate();
         if (!partyId) return false;
@@ -83,7 +75,7 @@ async function onInviteClick(friendId) {
         startPartyPolling(partyId);
     }
 
-    // 2️⃣ отправляем инвайт
+
     const resp = await partyInvite(state.party.id, friendId);
     if (resp?.error) return false;
 
